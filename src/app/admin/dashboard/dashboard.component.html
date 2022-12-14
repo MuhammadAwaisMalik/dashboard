@@ -1,0 +1,544 @@
+<div class="nk-app-root">
+  <!-- main @s -->
+  <div class="nk-main">
+    <!-- ######################################################################################### -->
+    <!-- <app-sidebar></app-sidebar> -->
+    <div class="nk-sidebar nk-sidebar-fixed is-dark" data-content="sidebarMenu">
+      <div class="nk-sidebar-element nk-sidebar-head">
+        <div class="nk-menu-trigger">
+          <a
+            href="#"
+            class="nk-nav-toggle nk-quick-nav-icon d-xl-none"
+            data-target="sidebarMenu"
+            ><em class="icon ni ni-arrow-left"></em
+          ></a>
+          <a
+            href="#"
+            class="nk-nav-compact nk-quick-nav-icon d-none d-xl-inline-flex"
+            data-target="sidebarMenu"
+            ><em class="icon ni ni-menu"></em
+          ></a>
+        </div>
+        <div class="nk-sidebar-brand">
+          <a routerLink="/admin/dashboard" class="logo-link nk-sidebar-logo">
+            <img
+              class="logo-light logo-img"
+              src="../../../assets/images/logo.png"
+              srcset="./images/logo2x.png 2x"
+              alt="logo"
+            />
+            <img
+              class="logo-dark logo-img"
+              src="../../../assets/images/logo-dark.png"
+              srcset="./images/logo-dark2x.png 2x"
+              alt="logo-dark"
+            />
+          </a>
+        </div>
+      </div>
+      <!-- .nk-sidebar-element -->
+      <div class="nk-sidebar-element nk-sidebar-body">
+        <div class="nk-sidebar-content">
+          <div class="nk-sidebar-menu" data-simplebar>
+            <ul class="nk-menu">
+              <li class="nk-menu-item">
+                <a routerLink="/admin/dashboard" class="nk-menu-link">
+                  <span class="nk-menu-icon"
+                    ><em class="icon ni ni-dashboard-fill"></em
+                  ></span>
+                  <span class="nk-menu-text">Dashboard</span>
+                </a>
+              </li>
+              <!-- .nk-menu-item -->
+              <li class="nk-menu-item has-sub">
+                <a routerLink="/admin/profiles" class="nk-menu-link">
+                  <span class="nk-menu-icon"
+                    ><em class="icon ni ni-calendar-booking-fill"></em
+                  ></span>
+                  <span class="nk-menu-text">Users</span>
+                </a>
+              </li>
+              <!-- .nk-menu-item -->
+              <li class="nk-menu-item has-sub">
+                <a href="#" class="nk-menu-link">
+                  <span class="nk-menu-icon"
+                    ><em class="icon ni ni-home-fill"></em
+                  ></span>
+                  <span class="nk-menu-text">Invoices</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ######################################################################################### -->
+    <div class="nk-wrap">
+      <!-- main header @s -->
+      <div class="nk-header nk-header-fixed is-light">
+        <div class="container-fluid">
+          <div class="nk-header-wrap">
+            <div class="nk-menu-trigger d-xl-none ms-n1">
+              <a
+                href="#"
+                class="nk-nav-toggle nk-quick-nav-icon"
+                data-target="sidebarMenu"
+                ><em class="icon ni ni-menu"></em
+              ></a>
+            </div>
+            <div class="nk-header-brand d-xl-none">
+              <a href="" class="logo-link">
+                <img
+                  class="logo-light logo-img"
+                  src="../../../assets/images/logo.png"
+                  srcset="./images/logo2x.png 2x"
+                  alt="logo"
+                />
+                <img
+                  class="logo-dark logo-img"
+                  src="../../../assets/images/logo-dark.png"
+                  srcset="./images/logo-dark2x.png 2x"
+                  alt="logo-dark"
+                />
+              </a>
+            </div>
+            <!-- .nk-header-brand -->
+            <!-- <div class="nk-header-news d-none d-xl-block">
+            <div class="nk-news-list">
+              <a class="nk-news-item" href="#">
+                <div class="nk-news-icon">
+                  <em class="icon ni ni-card-view"></em>
+                </div>
+                <div class="nk-news-text">
+                  <p>
+                    Do you know the latest update of 2022?
+                    <span>
+                      A overview of our is now available on YouTube</span
+                    >
+                  </p>
+                  <em class="icon ni ni-external"></em>
+                </div>
+              </a>
+            </div>
+          </div> -->
+            <!-- .nk-header-news -->
+            <div class="nk-header-tools">
+              <ul class="nk-quick-nav">
+                <li class="dropdown language-dropdown d-none d-sm-block me-n1">
+                  <a
+                    href="#"
+                    class="dropdown-toggle nk-quick-nav-icon"
+                    data-bs-toggle="dropdown"
+                  >
+                    <div class="quick-icon border border-light">
+                      <img
+                        class="icon"
+                        src="../../../assets/images/flags/english-sq.png"
+                        alt=""
+                      />
+                    </div>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end dropdown-menu-s1">
+                    <ul class="language-list">
+                      <li>
+                        <a href="#" class="language-item">
+                          <img
+                            src="../../../assets/images/flags/english.png"
+                            alt=""
+                            class="language-flag"
+                          />
+                          <span class="language-name">English</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- .dropdown -->
+                <li class="dropdown user-dropdown">
+                  <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+                    <div class="user-toggle">
+                      <div class="user-avatar sm">
+                        <em class="icon ni ni-user-alt"></em>
+                      </div>
+                      <div class="user-info d-none d-md-block">
+                        <div class="user-status">Admin</div>
+                        <div class="user-name dropdown-indicator">Muhammad</div>
+                      </div>
+                    </div>
+                  </a>
+                  <div
+                    class="dropdown-menu dropdown-menu-md dropdown-menu-end dropdown-menu-s1"
+                  >
+                    <div
+                      class="dropdown-inner user-card-wrap bg-lighter d-none d-md-block"
+                    >
+                      <div class="user-card">
+                        <div class="user-avatar">
+                          <span>AB</span>
+                        </div>
+                        <div class="user-info">
+                          <span class="lead-text">Muhammad</span>
+                          <span class="sub-text">info@softnio.com</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-inner">
+                      <ul class="link-list">
+                        <li>
+                          <a href="#"
+                            ><em class="icon ni ni-user-alt"></em
+                            ><span>View Profile</span></a
+                          >
+                        </li>
+                        <li>
+                          <a href="html/hotel/settings.html"
+                            ><em class="icon ni ni-setting-alt"></em
+                            ><span>Account Setting</span></a
+                          >
+                        </li>
+                        <li>
+                          <a href="html/hotel/settings-activity-log.html"
+                            ><em class="icon ni ni-activity-alt"></em
+                            ><span>Login Activity</span></a
+                          >
+                        </li>
+                        <li>
+                          <a class="dark-switch" href="#"
+                            ><em class="icon ni ni-moon"></em
+                            ><span>Dark Mode</span></a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="dropdown-inner">
+                      <ul class="link-list">
+                        <li>
+                          <a href="#"
+                            ><em class="icon ni ni-signout"></em
+                            ><span>Sign out</span></a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <!-- .dropdown -->
+                <li class="dropdown notification-dropdown me-n1">
+                  <a
+                    href="#"
+                    class="dropdown-toggle nk-quick-nav-icon"
+                    data-bs-toggle="dropdown"
+                  >
+                    <div class="icon-status icon-status-info">
+                      <em class="icon ni ni-bell"></em>
+                    </div>
+                  </a>
+                  <div
+                    class="dropdown-menu dropdown-menu-xl dropdown-menu-end dropdown-menu-s1"
+                  >
+                    <div class="dropdown-head">
+                      <span class="sub-title nk-dropdown-title"
+                        >Notifications</span
+                      >
+                      <a href="#">Mark All as Read</a>
+                    </div>
+                    <div class="dropdown-body">
+                      <div class="nk-notification">
+                        <div class="nk-notification-item dropdown-inner">
+                          <div class="nk-notification-icon">
+                            <em
+                              class="icon icon-circle bg-warning-dim ni ni-curve-down-right"
+                            ></em>
+                          </div>
+                          <div class="nk-notification-content">
+                            <div class="nk-notification-text">
+                              You have requested to <span>Widthdrawl</span>
+                            </div>
+                            <div class="nk-notification-time">2 hrs ago</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="dropdown-foot center">
+                      <a href="#">View All</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main header @e -->
+
+      <div class="nk-content">
+        <div class="container-fluid">
+          <div class="nk-content-inner">
+            <div class="nk-content-body">
+              <div class="nk-block-head nk-block-head-sm">
+                <div class="nk-block-between">
+                  <div class="nk-block-head-content">
+                    <h3 class="nk-block-title page-title">
+                      Dashboard Overview
+                    </h3>
+                    <div class="nk-block-des text-soft">
+                      <p>Welcome to DashLite Dashboard Template.</p>
+                    </div>
+                  </div>
+                  <!-- .nk-block-head-content -->
+                  <div class="nk-block-head-content">
+                    <div class="toggle-wrap nk-block-tools-toggle">
+                      <a
+                        href="#"
+                        class="btn btn-icon btn-trigger toggle-expand me-n1"
+                        data-target="pageMenu"
+                        ><em class="icon ni ni-more-v"></em
+                      ></a>
+                      <div
+                        class="toggle-expand-content"
+                        data-content="pageMenu"
+                      >
+                        <ul class="nk-block-tools g-3">
+                          <li>
+                            <div class="dropdown">
+                              <a
+                                href="#"
+                                class="dropdown-toggle btn btn-white btn-dim btn-outline-light"
+                                data-bs-toggle="dropdown"
+                                ><em
+                                  class="d-none d-sm-inline icon ni ni-calender-date"
+                                ></em
+                                ><span
+                                  ><span class="d-none d-md-inline">Last</span>
+                                  30 Days</span
+                                ><em
+                                  class="dd-indc icon ni ni-chevron-right"
+                                ></em
+                              ></a>
+                              <div class="dropdown-menu dropdown-menu-end">
+                                <ul class="link-list-opt no-bdr">
+                                  <li>
+                                    <a href="#"><span>Last 30 Days</span></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><span>Last 6 Months</span></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><span>Last 1 Years</span></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="nk-block-tools-opt">
+                            <a href="#" class="btn btn-primary"
+                              ><em class="icon ni ni-reports"></em
+                              ><span>Reports</span></a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .nk-block-head-content -->
+                </div>
+                <!-- .nk-block-between -->
+              </div>
+              <!-- .nk-block-head -->
+              <div class="nk-block">
+                <div class="row g-gs">
+                  <div class="col-md-3">
+                    <div class="card card-bordered card-full">
+                      <div class="card-inner">
+                        <div class="card-title-group align-start mb-0">
+                          <div class="card-title">
+                            <h6 class="title">Total Booking</h6>
+                          </div>
+                          <div class="card-tools">
+                            <em
+                              class="card-hint icon ni ni-help-fill"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="left"
+                              title="Total Booking"
+                            ></em>
+                          </div>
+                        </div>
+                        <div class="card-amount">
+                          <span class="amount"> 11,230 </span>
+                          <span class="change down text-danger"
+                            ><em class="icon ni ni-arrow-long-down"></em
+                            >1.93%</span
+                          >
+                        </div>
+                        <div class="invest-data">
+                          <div class="invest-data-amount g-2">
+                            <div class="invest-data-history">
+                              <div class="title">This Month</div>
+                              <div class="amount">1913</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- .card -->
+                  </div>
+                  <!-- .col -->
+                  <div class="col-md-3">
+                    <div class="card card-bordered card-full">
+                      <div class="card-inner">
+                        <div class="card-title-group align-start mb-0">
+                          <div class="card-title">
+                            <h6 class="title">Rooms Available</h6>
+                          </div>
+                          <div class="card-tools">
+                            <em
+                              class="card-hint icon ni ni-help-fill"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="left"
+                              title="Total Room"
+                            ></em>
+                          </div>
+                        </div>
+                        <div class="card-amount">
+                          <span class="amount"> 312 </span>
+                        </div>
+                        <div class="invest-data">
+                          <div class="invest-data-amount g-2">
+                            <div class="invest-data-history">
+                              <div class="title">Booked (Month)</div>
+                              <div class="amount">913</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- .card -->
+                  </div>
+                  <!-- .col -->
+                  <div class="col-md-3">
+                    <div class="card card-bordered card-full">
+                      <div class="card-inner">
+                        <div class="card-title-group align-start mb-0">
+                          <div class="card-title">
+                            <h6 class="title">Expenses</h6>
+                          </div>
+                          <div class="card-tools">
+                            <em
+                              class="card-hint icon ni ni-help-fill"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="left"
+                              title="Total Expenses"
+                            ></em>
+                          </div>
+                        </div>
+                        <div class="card-amount">
+                          <span class="amount">
+                            79,358.50
+                            <span class="currency currency-usd">USD</span>
+                          </span>
+                        </div>
+                        <div class="invest-data">
+                          <div class="invest-data-amount g-2">
+                            <div class="invest-data-history">
+                              <div class="title">This Month</div>
+                              <div class="amount">
+                                3,540.59
+                                <span class="currency currency-usd">USD</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- .card -->
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card card-bordered card-full">
+                      <div class="card-inner">
+                        <div class="card-title-group align-start mb-0">
+                          <div class="card-title">
+                            <h6 class="title">Expenses</h6>
+                          </div>
+                          <div class="card-tools">
+                            <em
+                              class="card-hint icon ni ni-help-fill"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="left"
+                              title="Total Expenses"
+                            ></em>
+                          </div>
+                        </div>
+                        <div class="card-amount">
+                          <span class="amount">
+                            79,358.50
+                            <span class="currency currency-usd">USD</span>
+                          </span>
+                        </div>
+                        <div class="invest-data">
+                          <div class="invest-data-amount g-2">
+                            <div class="invest-data-history">
+                              <div class="title">This Month</div>
+                              <div class="amount">
+                                3,540.59
+                                <span class="currency currency-usd">USD</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- .card -->
+                  </div>
+                  <!-- .col -->
+
+                  <!-- .row -->
+                </div>
+                <!-- .nk-block -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content @e -->
+        <!-- footer @s -->
+        <div class="nk-footer">
+          <div class="container-fluid">
+            <div class="nk-footer-wrap">
+              <div class="nk-footer-copyright">
+                &copy; 2022 DashLite. Template by
+                <a href="https://softnio.com" target="_blank">Softnio</a>
+              </div>
+              <div class="nk-footer-links ps-5 ms-5">
+                <ul class="nav nav-sm">
+                  <li class="nav-item dropup ps-5">
+                    <a
+                      href="#"
+                      class="dropdown-toggle dropdown-indicator has-indicator nav-link"
+                      data-bs-toggle="dropdown"
+                      data-offset="0,10"
+                      ><span>English</span></a
+                    >
+                    <div
+                      class="dropdown-menu dropdown-menu-sm dropdown-menu-end"
+                    >
+                      <ul class="language-list">
+                        <li>
+                          <a href="#" class="language-item">
+                            <span class="language-name">English</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- footer @e -->
+      </div>
+      <!-- wrap @e -->
+    </div>
+  </div>
+</div>

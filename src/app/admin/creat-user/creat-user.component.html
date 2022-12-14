@@ -1,0 +1,214 @@
+<div class="card card-bordered">
+  <div class="card-inner">
+    <form action="" class="form-validate">
+      <div class="row g-gs">
+        <div class="col-12">
+          <a routerLink="/admin/profiles">
+            <svg
+              style="width: 25px; float: right"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 320 512"
+            >
+              <path
+                d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-label" for="fv-full-name">Full Name</label>
+            <div class="form-control-wrap">
+              <input
+                type="text"
+                class="form-control"
+                id="fv-full-name"
+                name="fv-full-name"
+                [(ngModel)]="userForm.fullName"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-label" for="username">Username</label>
+            <div class="form-control-wrap">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">@</span>
+                </div>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="Username"
+                  [(ngModel)]="userForm.userName"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-label" for="venue-name">Venue Name</label>
+            <div class="form-control-wrap">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="venue-name"
+                  name="venue-name"
+                  [(ngModel)]="userForm.vanueName"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-label" for="venue-address">Venue Address</label>
+            <div class="form-control-wrap">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="venue-address"
+                  name="venue-address"
+                  [(ngModel)]="userForm.venueAddress"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-label" for="fv-topics">Status</label>
+            <div class="form-control-wrap">
+              <select
+                class="form-select js-select2"
+                id="fv-topics"
+                name="fv-topics"
+                data-placeholder="Select a option"
+                required
+              >
+                <option label="Select One Option" value=""></option>
+                <option value="fv-gq" [(ngModel)]="userForm.status">
+                  Active
+                </option>
+                <option value="fv-tq" [(ngModel)]="userForm.status">
+                  In-Active
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-label">Expirey Date</label>
+            <div class="form-control-wrap">
+              <input
+                type="text"
+                class="form-control date-picker"
+                for="date"
+                id="date"
+                name="date"
+                [(ngModel)]="userForm.date"
+                required
+              />
+            </div>
+            <div class="form-note">Date format <code>mm/dd/yyyy</code></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-label" for="email">E-mail</label>
+            <div class="form-control-wrap">
+              <div class="form-icon form-icon-right">
+                <em class="icon ni ni-mail"></em>
+              </div>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                [(ngModel)]="userForm.email"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <div class="form-control-wrap">
+              <div class="input-group">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  [(ngModel)]="userForm.password"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-label" for="payment">Payment</label>
+            <ul class="custom-control-group g-3 align-center">
+              <li>
+                <div class="custom-control custom-checkbox">
+                  <input
+                    type="radio"
+                    class="custom-control-input"
+                    name="payment"
+                    id="done"
+                    [(ngModel)]="userForm.payment"
+                    required
+                  />
+                  <label class="custom-control-label" name="payment" for="done"
+                    >Done</label
+                  >
+                </div>
+              </li>
+              <li>
+                <div class="custom-control custom-checkbox">
+                  <input
+                    type="radio"
+                    class="custom-control-input"
+                    name="payment"
+                    id="delay"
+                    [(ngModel)]="userForm.payment"
+                    required
+                  />
+                  <label class="custom-control-label" for="delay" name="payment"
+                    >Delay</label
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="form-group">
+            <button
+              type="submit"
+              class="btn btn-lg btn-primary"
+              (click)="creat()"
+            >
+              Add User
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
